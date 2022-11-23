@@ -1,0 +1,107 @@
+@font-face {
+  font-family: flexa-bold;
+  src: url(./Font/GT-Flexa-Compressed-Black-Trial.otf);
+}
+@font-face {
+  font-family: flexa-normal;
+  src: url(./Font/GT-Flexa-Compressed-Bold-Trial.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: flexa-normal;
+}
+body {
+  background-color: #000431;
+  margin: 4rem;
+  color: yellow;
+  border: 6px solid yellow;
+}
+header {
+  overflow: hidden;
+}
+h1 {
+  overflow: hidden;
+  transform: translateX(80%);
+  animation: scrolling 18s linear infinite;
+}
+@keyframes scrolling {
+  100% {
+    transform: translateX(100%);
+  }
+  0% {
+    transform: translateX(-30%);
+  }
+}
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+  .sub-title {
+    font-size: 2rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  @keyframes scrolling {
+    100% {
+      transform: translateX(100%);
+    }
+    0% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.sub {
+  overflow: hidden;
+  border-top: 6px solid yellow;
+  border-bottom: 6px solid yellow;
+}
+.sub-title {
+  font-size: 3rem;
+  transform: translateX(80%);
+  animation: scrolling-2 12s linear infinite;
+}
+@keyframes scrolling-2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-80%);
+  }
+}
+.circle {
+  width: 20rem;
+  height: 20rem;
+  top: 5%;
+  left: 25%;
+  background-color: yellow;
+  border-radius: 50%;
+  z-index: -1;
+}
+.circle-2 {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: yellow;
+  border-radius: 50%;
+  top: 54%;
+  right: 44%;
+}
+@media screen and (max-width: 576px) {
+  .circle {
+    width: 12rem;
+    height: 12rem;
+  }
+  .objects img {
+    width: 16rem !important;
+  }
+  @keyframes scrolling {
+    100% {
+      transform: translateX(100%);
+    }
+    0% {
+      transform: translateX(-80%);
+    }
+  }
+}

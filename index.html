@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="">
+      <h1 class="display-1">Benjamin Code</h1>
+      <!-- <h1 class="display-1 ms-auto">Benjamin Code</h1> -->
+    </header>
+    <div class="sub">
+      <p class="sub-title">fullstack, creative developper and youtuber</p>
+    </div>
+    <div class="main-section row">
+      <div class="col-md-7 position-relative text-center mt-5 objects">
+        <div class="circle position-absolute object" data-value="2"></div>
+        <img
+          src="./benjamincode cl.png"
+          data-value="-3"
+          class="object"
+          style="width: 25rem"
+          alt=""
+        />
+        <div class="circle-2 position-absolute object" data-value="20"></div>
+      </div>
+      <div class="col-md-5 p-5 my-auto">
+        <p>
+          Benjamin Code est un déve… Bon en vrai c’est moi qui écrit le texte
+          donc autant ne pas l’écrire à la 3ème personne. Je suis développeur
+          freelance depuis 8 ans. <br /><br />
+          J’ai un diplôme d’ingénieur en informatique, spécialisé dans le génie
+          logiciel mais tout le monde s’en fiche et je n’ai jamais eu à le
+          montrer à quiconque pour justifier quoi que ce soit. Les années
+          d’expériences et les nombreux clients satisfaits sont mes meilleures
+          arguments de ventes. <br /><br />
+          Si vous vous avez un projet pour moi, n’hésitez pas à me contacter par
+          mail :
+        </p>
+        <p>
+          <span><img src="./Groupe 4.png" alt="" /></span> b1jam1code@gmail.com
+        </p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      document.addEventListener('mousemove', parallax);
+      function parallax(e) {
+        document.querySelectorAll('.object').forEach(function (move) {
+          var moving_value = move.getAttribute('data-value');
+          var x = (e.clientX * moving_value) / 100;
+          var y = (e.clientY * moving_value) / 200;
+          move.style.transform =
+            'translateX(' + x + 'px) translateY(' + y + 'px)';
+        });
+      }
+    </script>
+  </body>
+</html>
